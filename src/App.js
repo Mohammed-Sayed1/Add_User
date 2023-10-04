@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+/*
+  * Fragment is a wrapper, the same concept of our Wrapper custom conponent.
+      - you can import it directly like this -> import {Fragment} from 'react';
+      - or import React from 'react' -> then call fragment like this -> React.Fragment
+*/
+import React, { useState, Fragment } from 'react';
 import AddUser from './components/Users/AddUser';
 import UsersList from "./components/Users/UsersList";
 
@@ -10,10 +15,10 @@ function App() {
     })
   }
   return (
-    <div>
+    <Fragment> 
       <AddUser onAddUser={addUserHandler} />
       <UsersList users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 
